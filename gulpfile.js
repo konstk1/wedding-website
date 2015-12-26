@@ -8,5 +8,9 @@ gulp.task('browserify',function() {
         .pipe(gulp.dest("./public/javascripts/"));
 });
 
+gulp.task('watchify', function() {
+
+});
+
 
 gulp.task('default', ['browserify']);
