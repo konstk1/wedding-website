@@ -1,4 +1,4 @@
-//var foundation = require('foundation-sites');
+var foundation = require('foundation-sites');
 
 $(function() {
     console.log('jquery ready');

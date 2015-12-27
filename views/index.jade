@@ -2,10 +2,15 @@ extends layout
 
 block scripts
   script(type='text/javascript' src='http://code.jquery.com/jquery.min.js')
-  script(src='js/index.min.js')
+  script(src='/js/index.min.js')
 
 block content
+  .callout.primary.small(data-closable)
+    p Alert box
+    button.close-button(type="button", aria-label="Dismiss alert", data-close)
+      span(aria-hidden=true) &times;
   h1= title
   p Welcome to #{title}
   button(class="button").
     Do Stuff
+  <script async src='http://localhost:3001/browser-sync/browser-sync-client.2.10.1.js'></script>
