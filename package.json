@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build-js": "browserify js/main.js > js/findem.js -dv",
-    "watch-js": "watchify js/main.js -o js/findem.js -dv"
+    "build-js": "browserify client/index.js -o public/js/index.min.js -dv",
+    "watch-js": "watchify client/index.js -o public/js/index.min.js -dv"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
