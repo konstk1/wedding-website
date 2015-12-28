@@ -9,19 +9,23 @@ block content
       .col.s12
         h2= title
     .row
-      .col.s8(style={background: '#00aa00', height: '200px'})
-        p Image 1
-        p Parallax
+      .col.s8
+        .parallax-container(style={height: '400px'})
+          .parallax
+            img(src='http://curiositysip.com/wp-content/uploads/2015/08/Tulip-17.jpg')
       .col.s4
         p Welcome to #{title}
         .btn-large.waves-effect Do Stuff
     .row
       .col.s4
         p Some text
-      .col.s8(style={background: '#00aa00', height: '200px'})
-        p Image 2
-        p Parallax
+      .parallax-container(style={height: '400px'})
+        .parallax
+          img(src='http://curiositysip.com/wp-content/uploads/2015/08/Tulip-8.jpg')
+
     .row
-      .col.s12(style={background: '#ffff00', height: '200px'})
-        p Store / Timeline with Carousel
+      .parallax-container(style={height: '400px'})
+        .parallax
+          img(src='http://curiositysip.com/wp-content/uploads/2015/08/Tulip-16.jpg')
+
 
