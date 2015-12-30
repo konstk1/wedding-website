@@ -7,14 +7,21 @@ html
     script(type='text/javascript' src='http://code.jquery.com/jquery.min.js')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js")
     link(rel='stylesheet', href='/css/style.min.css')
+    link( href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700', rel='stylesheet', type='text/css')
+
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
     block scripts
   body
     .navbar-fixed
-      nav.light-blue
-        .nav-wrapper
-          a(href="", class="brand-logo left") Steph + Kon
-          ul.right
+      nav.white
+        .nav-wrapper.container
+          a.button-collapse.hide-on-med-and-up(href="#", data-activates="mobile-menu")
+            i.material-icons menu
+          .brand-logo Steph + Kon
+          ul.right.hide-on-small-only
+            li: a(href="#") When
+            li: a(href="#") Where
+          ul.side-nav#mobile-menu
             li: a(href="#") When
             li: a(href="#") Where
     block content

@@ -1,2 +1,52 @@
+html
+  font-family: 'Lato', sans-serif
+
+$navHeight: 40px
+nav
+  color: black
+  height: $navHeight
+  line-height: $navHeight
+  .brand-logo
+    color: black
+    @media only screen and (min-width: 601px)
+      left: inherit
+      -webkit-transform: none
+      transform: none
+  .button-collapse i
+    height: $navHeight
+    line-height: $navHeight
+    color: black
+  ul a
+    color: black
+
+.navbar-fixed
+  height: $navHeight
+
 .btn-large
   background-color: #AA22FE
+
+#section1
+  height: 250px
+  @media only screen and (min-width: 601px)
+    height: 400px
+
+@mixin section1-text($size)
+  color: white
+  text-transform: uppercase
+  font-size: $size
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+  letter-spacing: 2px
+
+#section1 .text
+  position: relative
+  top: 30%
+  h5
+    @include section1-text(28px)
+    padding-bottom: 10px
+  h6
+    @include section1-text(20px)
+
+.parallax img
+  max-width: 150%
+  @media only screen and (min-width: 601px)
+    max-width: 120%

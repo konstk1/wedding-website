@@ -4,28 +4,14 @@ block scripts
   script(src='/js/index.min.js')
 
 block content
-  .container.center
-    .row
-      .col.s12
-        h2= title
-    .row
-      .col.s8
-        .parallax-container(style={height: '400px'})
-          .parallax
-            img(src='http://curiositysip.com/wp-content/uploads/2015/08/Tulip-17.jpg')
-      .col.s4
-        p Welcome to #{title}
-        .btn-large.waves-effect Do Stuff
-    .row
-      .col.s4
-        p Some text
-      .parallax-container(style={height: '400px'})
-        .parallax
-          img(src='http://curiositysip.com/wp-content/uploads/2015/08/Tulip-8.jpg')
-
-    .row
-      .parallax-container(style={height: '400px'})
-        .parallax
-          img(src='http://curiositysip.com/wp-content/uploads/2015/08/Tulip-16.jpg')
-
+  .parallax-container#section1
+    .parallax
+      img(src='img/getting_married.jpg')
+    .text.center
+      h5 We are getting married!
+      h6 Sunday, May 22, 2016
+      h6 5pm - 1pm
+  .parallax-container(style={height: '400px'})
+    .parallax
+      img(src='img/tulips.jpg')
 
