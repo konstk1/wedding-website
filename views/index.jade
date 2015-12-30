@@ -5,13 +5,45 @@ block scripts
 
 block content
   .parallax-container#section1
-    .parallax
-      img(src='img/getting_married.jpg')
+    .parallax#when
+      img(src='img/getting_married.png')
     .text.center
       h5 We are getting married!
       h6 Sunday, May 22, 2016
       h6 5pm - 1pm
-  .parallax-container(style={height: '400px'})
+  .container#where
+    h1.center Location
+    .divider
+    .row
+      .col.s12.m6
+        h5.center Newport Vineyards
+        p.center
+          | 909 East Main Rd. (Rte 138)
+          br
+          | Middletown, RI 02842
+        p.center(style={'font-size': '15px', 'font-weight': '100'})
+          | Situated amongst 50-acres and 15 minutes from downtown Newport,
+          | the vineyard offers ample parking, is easily accessible from Newport
+          | or Providence, and is just over an hour from Boston and 3.5 hours
+          | from New York City.
+        div(style={'text-align': 'center'})
+          a.btn.waves-effect.waves-light(href='https://goo.gl/maps/Bz4Rjqn2UfK2', target='_blank')
+            | Map
+            i.material-icons.left map
+          span &nbsp &nbsp
+          a.btn.waves-effect.waves-light(href='http://www.newportvineyards.com', target='_blank') Website
+            i.material-icons.right.mdi-navigation-arrow-forward
+        br
+
+      .col.s12.m6
+        h5.center Weather
+        .col.s6
+          div.center Current
+          div.center #{temps.current}°
+        .col.s6
+          div.center On The Day
+          div.center #{temps.future}°
+  .parallax-container#section2
     .parallax
-      img(src='img/tulips.jpg')
+      img(src='img/newport-brix.jpg')
 

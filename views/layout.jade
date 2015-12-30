@@ -17,11 +17,14 @@ html
         .nav-wrapper.container
           a.button-collapse.hide-on-med-and-up(href="#", data-activates="mobile-menu")
             i.material-icons menu
-          .brand-logo Steph + Kon
+          .brand-logo= title
           ul.right.hide-on-small-only
-            li: a(href="#") When
-            li: a(href="#") Where
+            li: a(href="#rsvp") RSVP
+            li: a(href="#when") When
+            li: a(href="#where") Where
           ul.side-nav#mobile-menu
-            li: a(href="#") When
-            li: a(href="#") Where
+            li: a(href="#when") When
+            li: a(href="#where") Where
+            li: a(href="#rsvp") RSVP
+
     block content
