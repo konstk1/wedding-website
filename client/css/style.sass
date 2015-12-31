@@ -2,18 +2,24 @@ html
   font-family: 'Lato', sans-serif
 
 $navHeight: 50px
+$navFontSize: 12px
 nav
   color: black
   height: $navHeight
   line-height: $navHeight
   .brand-logo
     color: black
-    font-size: 12px
+    font-size: $navFontSize
     letter-spacing: 2px
     @media only screen and (min-width: 601px)
       left: inherit
       -webkit-transform: none
       transform: none
+    #favicon
+      height: $navFontSize
+      margin-left: 2px
+      margin-right: 4px
+      margin-bottom: -2px
   .button-collapse i
     height: $navHeight
     line-height: $navHeight
