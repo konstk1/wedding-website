@@ -79,3 +79,11 @@ nav {
 
 .btn:hover {
   background-color: #0373b9; }
+
+footer.page-footer {
+  margin-top: 0;
+  padding-top: 0;
+  background-color: #d84d54;
+  height: 30px; }
+  footer.page-footer small {
+    line-height: 30px; }
