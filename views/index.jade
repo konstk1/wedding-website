@@ -10,7 +10,7 @@ block content
     .text.center
       h5 We are getting married!
       h6 Sunday, May 22, 2016
-      h6 5pm - 1pm
+      h6 5pm - 11pm
   .container#where
     h1.center Location
     .divider
@@ -39,11 +39,19 @@ block content
         h5.center Weather
         .col.s6
           div.center Current
-          div.center #{temps.current}°
+          div.center #{temps.current}°F
         .col.s6
           div.center On The Day
-          div.center #{temps.future}°
+          div.center #{temps.future}°F
   .parallax-container#section2
     .parallax
       img(src='img/newport-brix.jpg')
+
+  .modal#modalRsvp
+    .modal-content
+      h4 RSVP
+      p Invitations will be sent out in early March.
+    .modal-footer
+      a.modal-action.modal-close.waves-effect.waves-teal.btn-flat(href='#!') OK
+
 

@@ -6,6 +6,7 @@ html
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css")
     script(type='text/javascript' src='http://code.jquery.com/jquery.min.js')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js")
+    script(src="js/smooth-scroll.js")
     link(rel='stylesheet', href='/css/style.min.css')
     link( href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700', rel='stylesheet', type='text/css')
 
@@ -21,13 +22,13 @@ html
             i.material-icons menu
           .brand-logo= title
           ul.right.hide-on-small-only
-            li: a(href="#rsvp") RSVP
-            li: a(href="#when") When
-            li: a(href="#where") Where
+            li: a.modal-trigger(href="#modalRsvp") RSVP
+            li: a(data-scroll, href="#when") When
+            li: a(data-scroll, href="#where") Where
           ul.side-nav#mobile-menu
-            li: a(href="#when") When
-            li: a(href="#where") Where
-            li: a(href="#rsvp") RSVP
+            li: a(data-scroll, href="#when") When
+            li: a(data-scroll, href="#where") Where
+            li: a.modal-trigger(href="#modalRsvp") RSVP
 
     block content
     include google_analytics

@@ -1,7 +1,18 @@
 $(function() {
     console.log('jquery ready');
     $('.parallax').parallax();
-    $('.button-collapse').sideNav();
+    $('.button-collapse').sideNav({
+        closeOnClick: true
+    });
+    $('.modal-trigger').leanModal();
+    smoothScroll.init({
+        speed: 500,
+        easing: 'easeInOutCubic',
+        offset: 70,
+        updateURL: false,
+        callbackBefore: function (toggle, anchor) {},
+        callbackAfter: function (toggle, anchor) {}
+    });
 });
 
 console.log('Main Ready');
