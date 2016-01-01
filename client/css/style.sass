@@ -35,9 +35,6 @@ nav
 .navbar-fixed
   height: $navHeight
 
-.btn-large
-  background-color: #AA22FE
-
 #section1
   height: 300px
   @media only screen and (min-width: 601px)
@@ -83,10 +80,14 @@ nav
 .btn:hover
   background-color: #0373b9
 
+$footerHeight: 30px
+
 footer.page-footer
   margin-top: 0
   padding-top: 0
   background-color: rgb(216, 77, 84)
-  height: 30px
+  height: $footerHeight
+  .footer-copyright
+    height: $footerHeight
   small
-    line-height: 30px
+    line-height: $footerHeight
