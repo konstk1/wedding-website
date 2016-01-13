@@ -1,0 +1,29 @@
+//
+   Created by kxk03 on 1/13/16.
+
+extends layout
+
+block content
+  .row
+    br
+    br
+    .col.s2
+        .text &nbsp
+    .col.s8
+      .row
+        .input-field.col.s6
+          i.material-icons.prefix account_circle
+          input(id="first_name", type="text", class="validate")
+          label(for="first_name") First Name
+        .input-field.col.s6
+          input(id="last_name", type="text", class="validate")
+          label(for="last_name") Last Name
+      .row
+        .input-field.col.s6
+          i.material-icons.prefix exposure_plus_1
+          input(id="guest_first_name", type="text", class="validate")
+          label(for="guest_first_name") First Name
+        .input-field.col.s6
+          input(id="guest_last_name", type="text", class="validate")
+          label(for="guest_last_name") Last Name
+    .col.s2

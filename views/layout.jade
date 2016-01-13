@@ -34,4 +34,6 @@ html
             li: a.modal-trigger(href="#modalRsvp") RSVP
 
     block content
-    include google_analytics
+
+    if env != "test"
+      include google_analytics
