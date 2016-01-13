@@ -13,6 +13,9 @@ $(function() {
         callbackBefore: function (toggle, anchor) {},
         callbackAfter: function (toggle, anchor) {}
     });
+    $(document).ready(function() {
+        $('select').material_select();
+    });
 });
 
 console.log('Main Ready');
