@@ -4,6 +4,7 @@ block scripts
   script(src='/js/index.min.js')
 
 block content
+
   .parallax-container#section1
     .parallax#when
       img(src='img/getting_married.png')
@@ -11,6 +12,7 @@ block content
       h5 We are getting married!
       h6 Sunday, May 22, 2016
       h6 5pm - 11pm
+
   .container#where
     h1.center Location
     .divider
@@ -43,11 +45,59 @@ block content
         .col.s6
           div.center On The Day
           div.center #{temps.future}°F
+
   .parallax-container#section2
     .parallax
       img(src='img/newport-brix.jpg')
 
-  .modal#modalRsvp
+  .container#newport
+    h1.center Newport
+    .divider(style={'margin-top': '30px'})
+    .row
+      h5.center Arriving
+      .col.s12.m6.center
+        i.material-icons airplanemode_active
+        p Fly
+      .col.s12.m6.center
+        i.material-icons directions_car
+        p Drive
+    .divider(style={'margin-top': '30px'})
+    .row
+      h5.center Staying
+      p.center Something something about hotel options
+      .row.center
+        .col.s12.m6
+          | Hotel 1 description and reservation code
+          .br
+          a.btn Link
+        .col.s12.m6
+          | Hotel1 Img
+      .row.center
+        .col.s12.m6
+          | Hotel 2 description and reservation code
+          .br
+          a.btn Link
+        .col.s12.m6
+          | Hotel2 Img
+
+  .parallax-container#section3
+    .parallax
+      img(src='img/tulips.jpg')
+
+  .container#weddingday
+    h1.center Wedding Day
+    .divider(style={'margin-bottom': '30px'})
+    .row.center
+      h5 Transportation
+      .col.s12.m6
+        i.material-icons directions_bus
+        p Shuttle Info
+      .col.s12.m6
+        i.material-icons local_taxi
+        p Uber / Lyft / Taxi Info
+      .br &nbsp
+      a.btn LARGE RSVP
+  .modal#modalrsvp
     .modal-content
       h4 RSVP
       p Invitations will be sent out in early March.

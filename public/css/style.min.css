@@ -70,12 +70,12 @@ nav {
     width: 1400px;
     margin: 0 auto; } }
 
-#where h1 {
+#where h1, #newport h1, #weddingday h1 {
   font-size: 44px;
   font-weight: 100;
   text-transform: uppercase; }
 
-#where h5 {
+#where h5, #newport h5, #weddingday h5 {
   font-weight: 100;
   text-transform: uppercase; }
 
