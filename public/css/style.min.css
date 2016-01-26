@@ -65,6 +65,11 @@ nav {
     .parallax img {
       max-width: 120%; } }
 
+@media only screen and (min-width: 1400px) {
+  .parallax {
+    width: 1400px;
+    margin: 0 auto; } }
+
 #where h1 {
   font-size: 44px;
   font-weight: 100;
