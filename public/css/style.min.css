@@ -95,6 +95,13 @@ nav {
   font-size: 15px;
   font-weight: 300; }
 
+.slider .slides {
+  background-color: black; }
+
+.slider .slides li img {
+  background-size: contain;
+  background-repeat: no-repeat; }
+
 footer.page-footer {
   margin-top: 0;
   padding-top: 0;
