@@ -23,7 +23,7 @@ block content
           | 909 East Main Rd. (Rte 138)
           br
           | Middletown, RI 02842
-        p.center(style={'font-size': '15px', 'font-weight': '100'})
+        p.center.info-text
           | Situated amongst 50-acres and 15 minutes from downtown Newport,
           | the vineyard offers ample parking, is easily accessible from Newport
           | or Providence, and is just over an hour from Boston and 3.5 hours
@@ -56,29 +56,65 @@ block content
     .row
       h5.center Arriving
       .col.s12.m6.center
-        i.material-icons airplanemode_active
+        i.material-icons.logistics-icons airplanemode_active
         p Fly
+        p.info-text
+          | The closest airport is #[a(href="http://www.pvdairport.com/") Providence T.F. Green (PVD)].&nbsp
+          | It's about a half an hour #[a(href="https://goo.gl/maps/fzjMbNafhSz") drive] from Newport Vineyards.
+          | #[br]#[br]
+          | If you prefer to fly into Boston, #[a(href="https://www.massport.com/logan-airport/") Boston Logan Airport (BOS)]&nbsp
+          | is an hour and half #[a(href="https://goo.gl/maps/DuUaeLq5NSs") drive] from the vineyards.
+          | #[br]#[br]
+          | For those with their own planes, #[a(href="http://www.pvdairport.com/corporate/general-aviation/newport-uuu") Newport State Airport (KUUU)]&nbsp
+          | is literally #[a(href="https://goo.gl/maps/4cMAZ4hN2x22") across the street] from Newport Vineyards
       .col.s12.m6.center
-        i.material-icons directions_car
+        i.material-icons.logistics-icons directions_car
         p Drive
+        p.info-text
+          | Point your GPS or cellular device to #[a(href="https://goo.gl/maps/Eknt73tJKcC2") 909 East Main Rd., Middletown, RI 02842]. &nbsp Drive safe.
     .divider(style={'margin-top': '30px'})
-    .row
+    .row#staying
       h5.center Staying
-      p.center Something something about hotel options
+      p.center.info-text
+        | We blocked out 40 rooms in three hotels at discounted rates, all within 3 miles of Newport Vineyards.&nbsp&nbsp
+        | Follow the links or use provided discount code to reserve your rooms.
+        | After specified dates, discounted rates will no longer be available.
+        | We will be staying at Homewood Suites.
+        br
+        | For those looking for a more unique or budget friendly experience, we recommend #[a(href="https://www.airbnb.com/") airbnb].
       .row.center
         .col.s12.m6
-          | Hotel 1 description and reservation code
-          .br
-          a.btn Link
+          h5 Courtyard Newport Middletown
+          p.info-text
+            | Sunday night only.  10 king and 10 double queen rooms.  $159-$189 per night.
+            | Available through April 22nd.
+            | Reserve through link below, group rate will be applied automatically.
+          p
+            | 9 Commerce Drive, Middletown, RI
+          a.btn.waves-effect.waves-light(href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=DACOSTA%20KLITENIK%20WEDDING%20ROOM%20BLOCK%5Epvdmd%60DKWDKWA%7CDKWDKWB%60159.00-189.00%60USD%60false%605%605/22/16%605/23/16%6004/22/2016&app=resvlink&stop_mobi=yes", target='_blank')
+            | Reserve
+            i.material-icons.right hotel
         .col.s12.m6
-          | Hotel1 Img
+          img(src="img/marriott_room.jpg", style={'max-width': '100%'})
       .row.center
         .col.s12.m6
-          | Hotel 2 description and reservation code
-          .br
-          a.btn Link
+          h5 Hampton Inn & Homewood Suites
+          p.info-text
+            | These two hotels are right next to each other. $161 for Sunday night and $233 per night on Friday and Saturday.
+            | For Saturday night there is a 2 night minimum stay.
+            | Available through April 1st.
+            | Go to website and use rate code DKW.
+          p
+            | 317 & 348 West Main Rd, Middletown, RI
+          a.btn.waves-effect.waves-light(href="http://www.middletownsuites.hamptoninn.com", target='_blank')
+            | Hampton Inn
+            i.material-icons.right hotel
+          span &nbsp &nbsp
+          a.btn.waves-effect.waves-light(href="http://www.newportmiddletown.homewoodsuites.com", target='_blank')
+            | Homewood Suites
+            i.material-icons.right hotel
         .col.s12.m6
-          | Hotel2 Img
+          img(src="img/homewood-room.jpg", style={'max-width': '100%'})
 
   .parallax-container#section3
     .parallax
@@ -90,13 +126,15 @@ block content
     .row.center
       h5 Transportation
       .col.s12.m6
-        i.material-icons directions_bus
-        p Shuttle Info
+        i.material-icons.logistics-icons directions_bus
+        p.info-text
+          | There will be a shuttle from the hotels to Newport Vineyards and back.
+          | More information will be available once we arrange it.
       .col.s12.m6
-        i.material-icons local_taxi
-        p Uber / Lyft / Taxi Info
-      .br &nbsp
-      a.btn LARGE RSVP
+        i.material-icons.logistics-icons local_taxi
+        p.info-text
+          | #[a(href="http://www.uber.com", target="_blank") Uber] and #[a(href="http://www.lyft.com", target="_blank") Lyft] are both available in the area
+      br
   .modal#modalrsvp
     .modal-content
       h4 RSVP

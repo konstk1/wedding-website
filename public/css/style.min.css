@@ -87,6 +87,14 @@ nav {
 .btn:hover {
   background-color: #0373b9; }
 
+.logistics-icons {
+  font-size: 45px;
+  color: #092f76; }
+
+.info-text {
+  font-weight: 100;
+  font-size: 15px; }
+
 footer.page-footer {
   margin-top: 0;
   padding-top: 0;
