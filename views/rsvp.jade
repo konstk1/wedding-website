@@ -9,7 +9,7 @@ block content
     br
     .col.s2
       .text &nbsp
-    .col.s8
+    form.col.s8
       .row.center
         input.with-gap(name="group1", type="radio", id="coming_yes")
         label(for="coming_yes") I'm coming
@@ -19,10 +19,10 @@ block content
       .row
         .input-field.col.m6.s12
           i.material-icons.prefix account_circle
-          input(id="first_name", type="text", class="validate")
-          label(for="first_name") First Name
+          input(id="first_name", type="text", class="validate valid")
+          label(for="first_name" data-error="Fill it out" data-success="Good") First Name
         .input-field.col.m6.s12
-          input(id="last_name", type="text", class="validate")
+          input(id="last_name", type="text", class="validate", required)
           label(for="last_name") Last Name
       .row
         .input-field.col.m4.s12
@@ -51,5 +51,5 @@ block content
           textarea(id="message", class="materialize-textarea")
           label(for="message") Message (Optional)
       .row
-        a.btn-flat.right Submit
+        button.btn-flat.right(type="submit", name="action") Submit
     .col.s2
