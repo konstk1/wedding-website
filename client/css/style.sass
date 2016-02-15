@@ -100,6 +100,17 @@ $ourBlue: #03a9f4
   background-size: contain
   background-repeat: no-repeat
 
+.error-box
+  border: 2px solid red
+
+label[data-error].text-field-label:after
+  white-space: nowrap
+  font-size: 12px
+
+label[data-error].text-field-label:not(.active):after
+  transform: translateY(-140%)
+
+
 $footerHeight: 30px
 
 footer.page-footer

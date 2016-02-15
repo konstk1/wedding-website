@@ -102,6 +102,16 @@ nav {
   background-size: contain;
   background-repeat: no-repeat; }
 
+.error-box {
+  border: 2px solid red; }
+
+label[data-error].text-field-label:after {
+  white-space: nowrap;
+  font-size: 12px; }
+
+label[data-error].text-field-label:not(.active):after {
+  transform: translateY(-140%); }
+
 footer.page-footer {
   margin-top: 0;
   padding-top: 0;
