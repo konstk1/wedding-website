@@ -2,6 +2,7 @@ extends layout
 
 block scripts
   script(src='/js/index.min.js')
+  script(src='/js/jquery.validate.min.js')
 
 block content
 
@@ -154,12 +155,9 @@ block content
         p.info-text
           | #[a(href="http://www.uber.com", target="_blank") Uber] and #[a(href="http://www.lyft.com", target="_blank") Lyft] are both available in the area
       br
+
   .modal#modalrsvp
-    .modal-content
-      h4 RSVP
-      p Invitations will be sent out in early March.
-    .modal-footer
-      a.modal-action.modal-close.waves-effect.waves-red.btn-flat(href='#!') OK
+    include rsvp
 
   footer.page-footer
     .footer-copyright
