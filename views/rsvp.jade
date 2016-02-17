@@ -11,44 +11,52 @@
   .row
     form.col.s12#rsvp-form(method="get", action="")
       .row.center#coming-group
+        .col.m2.s3
+          p &nbsp
         input.with-gap(name="rsvp_group", type="radio", value="yes", id="coming_yes", required)
-        label(for="coming_yes") I'm coming
-        span &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        label.col.m3.s6.center(for="coming_yes") I'm coming
+        .col.m1.s3
+          p &nbsp
+        .col.m1.s3
+          p &nbsp
         input.with-gap(name="rsvp_group", type="radio", value="no", id="coming_no")
-        label(for="coming_no") Can't make it
+        label.col.m3.s6.center(for="coming_no") Can't make it
+        .col.m2.s3
+          p &nbsp
       .row
-        .input-field.col.m6.s12
+        .col.m1.s12
           i.material-icons.prefix account_circle
+        .input-field.col.m5.s12
           input(id="first_name", name="first_name", type="text", class="validate", required)
           label.text-field-label(for="first_name") First Name
         .input-field.col.m6.s12
           input(id="last_name", name="last_name", type="text", class="validate", required)
           label.text-field-label(for="last_name") Last Name
       .row
-        .input-field.col.m4.s12
+        .col.m1.s12
           i.material-icons.prefix exposure_plus_1
+        .input-field.col.m3.s12
           input(id="bringing_guest", type="checkbox", class="filled-in")
           label(for="bringing_guest") Guest
         .input-field.col.m8.s12
           input(id="guest_name", type="text", class="validate", disabled)
           label(for="guest_name") Guest Name (Optional)
       .row
-        p Suggest a song
-        .col.s4
-          .input-field.col.s2(style={"padding-left": "0"})
-            i.material-icons.prefix music_note
-          .input-field.col.s10
-            select(id="music_type")
-              option(value="1") Cocktail Hour
-              option(value="2") Dinner
-              option(value="3" selected) Dancing
-            label(for="music_type") Style
-        .input-field.col.s8
+        .col.m1.s12
+          i.material-icons.prefix music_note
+        .input-field.col.m3.s12
+          select(id="music_type")
+            option(value="1") Cocktail Hour
+            option(value="2") Dinner
+            option(value="3" selected) Dancing
+          label(for="music_type") Suggest a song for
+        .input-field.col.m8.s12
           input(id="song1", type="text", class="validate")
           label(for="song1") Artist - Title
       .row
-        .input-field.col.s12
+        .col.m1.s12
           i.material-icons.prefix mode_edit
+        .input-field.col.m11.s12
           textarea(id="message", class="materialize-textarea")
           label(for="message") Message (Optional)
       .row

@@ -36,7 +36,7 @@ $(function() {
     $("#rsvp-form").validate({
     });
 
-    $('input[name="rsvp_group').change(function() {
+    $('input[name="rsvp_group"]').change(function() {
         $(this).parent().removeClass('error-box');
     });
 

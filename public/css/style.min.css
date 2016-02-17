@@ -102,6 +102,11 @@ nav {
   background-size: contain;
   background-repeat: no-repeat; }
 
+@media only screen and (max-width: 992px) {
+  .modal {
+    width: 90%;
+    max-height: 80%; } }
+
 .error-box {
   border: 2px solid red; }
 
