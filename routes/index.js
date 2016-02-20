@@ -28,4 +28,8 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/rsvp', function(req, res, next) {
+  res.render('rsvp', {title: 'RSVP', env: "test"});
+});
+
 module.exports = router;

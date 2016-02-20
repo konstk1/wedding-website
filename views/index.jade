@@ -2,15 +2,18 @@ extends layout
 
 block scripts
   script(src='/js/index.min.js')
+  script(src='/js/jquery.validate.min.js')
 
 block content
+
   .parallax-container#section1
     .parallax#when
       img(src='img/getting_married.png')
     .text.center
       h5 We are getting married!
       h6 Sunday, May 22, 2016
-      h6 5pm - 11pm
+      h6 5:30pm - 11pm
+
   .container#where
     h1.center Location
     .divider
@@ -21,7 +24,7 @@ block content
           | 909 East Main Rd. (Rte 138)
           br
           | Middletown, RI 02842
-        p.center(style={'font-size': '15px', 'font-weight': '100'})
+        p.center.info-text
           | Situated amongst 50-acres and 15 minutes from downtown Newport,
           | the vineyard offers ample parking, is easily accessible from Newport
           | or Providence, and is just over an hour from Boston and 3.5 hours
@@ -43,16 +46,118 @@ block content
         .col.s6
           div.center On The Day
           div.center #{temps.future}°F
+
   .parallax-container#section2
     .parallax
       img(src='img/newport-brix.jpg')
 
-  .modal#modalRsvp
-    .modal-content
-      h4 RSVP
-      p Invitations will be sent out in early March.
-    .modal-footer
-      a.modal-action.modal-close.waves-effect.waves-red.btn-flat(href='#!') OK
+  .container#newport
+    h1.center Newport
+    .divider(style={'margin-top': '30px'})
+    .row
+      h5.center Arriving
+      .col.s12.m6.center
+        i.material-icons.logistics-icons airplanemode_active
+        p Fly
+        p.info-text
+          | The closest airport is #[a(href="http://www.pvdairport.com/") Providence T.F. Green (PVD)].&nbsp
+          | It's about a half an hour #[a(href="https://goo.gl/maps/fzjMbNafhSz") drive] from Newport Vineyards.
+          | #[br]#[br]
+          | If you prefer to fly into Boston, #[a(href="https://www.massport.com/logan-airport/") Boston Logan Airport (BOS)]&nbsp
+          | is an hour and half #[a(href="https://goo.gl/maps/DuUaeLq5NSs") drive] from the vineyard.
+          | #[br]#[br]
+          | If you are flying on a private plane, #[a(href="http://www.pvdairport.com/corporate/general-aviation/newport-uuu") Newport State Airport (KUUU)]&nbsp
+          | is #[a(href="https://goo.gl/maps/4cMAZ4hN2x22") across the street] from Newport Vineyards
+      .col.s12.m6.center
+        i.material-icons.logistics-icons directions_car
+        p Drive
+        p.info-text
+          | Point your GPS or cellular device to #[a(href="https://goo.gl/maps/9HDDMfgBqQ82", target='_blank') 909 East Main Rd., Middletown, RI 02842].
+          | One hour from Boston, two hours from Hartford, and three and a half hours from NYC. &nbsp Drive safe.
+    .divider(style={'margin-top': '30px'})
+    .row#staying
+      h5.center Staying
+      p.center.info-text
+        | We blocked out 40 rooms in three hotels at group rates, all within 3 miles of Newport Vineyards.&nbsp&nbsp
+        | After specified dates, group rates will no longer be available.
+        | We will be staying at Homewood Suites.
+        br
+        | For those looking for a more unique or budget friendly experience, we recommend #[a(href="https://www.airbnb.com/") airbnb].
+      .row.center
+        .col.s12.m6
+          h5 Courtyard Newport Middletown
+          p.info-text
+            | Sunday night only.  10 king and 10 double queen rooms.  $159-$189 per night.
+            | Available through April 22nd.
+            br
+            | Reserve through link below, group rate will be applied automatically.
+          p
+            | 9 Commerce Drive, Middletown, RI #[br] 401-849-8000
+          a.btn.waves-effect.waves-light(href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=DACOSTA%20KLITENIK%20WEDDING%20ROOM%20BLOCK%5Epvdmd%60DKWDKWA%7CDKWDKWB%60159.00-189.00%60USD%60false%605%605/22/16%605/23/16%6004/22/2016&app=resvlink&stop_mobi=yes", target='_blank')
+            | Reserve
+            i.material-icons.right hotel
+        .col.s12.m6
+          img(src="img/marriott_room.jpg", style={'max-width': '100%'})
+      .row.center
+        .col.s12.m6
+          h5 Hampton Inn & Homewood Suites
+          p.info-text
+            | These two hotels are right next to each other. 10 rooms in each hotel.  $161 for Sunday night and $233 per night on Friday and Saturday.
+            | For Saturday night there is a 2 night minimum stay.
+            | Available through April 1st.
+            br
+            | Go to website and use rate code #[u DKW].
+          p
+            | Hampton - 317 West Main Rd, Middletown, RI #[br] 401-848-6555
+            br
+            | Homewood - 348 West Main Rd, Middletown, RI #[br] 401-848-2700
+          a.btn.waves-effect.waves-light(href="http://www.middletownsuites.hamptoninn.com", target='_blank')
+            | Hampton Inn
+            i.material-icons.right hotel
+          span &nbsp &nbsp
+          a.btn.waves-effect.waves-light(href="http://www.newportmiddletown.homewoodsuites.com", target='_blank')
+            | Homewood Suites
+            i.material-icons.right hotel
+        .col.s12.m6
+          img(src="img/homewood-room.jpg", style={'max-width': '100%'})
+
+  .slider
+    ul.slides.center
+      li
+        img(src="img/slider_10.jpg")
+      li
+        img(src="img/slider_20.jpg")
+      li
+        img(src="img/slider_30.jpg")
+      li
+        img(src="img/slider_40.jpg")
+      li
+        img(src="img/slider_50.jpg")
+      li
+        img(src="img/slider_60.jpg")
+      li
+        img(src="img/slider_70.jpg")
+      li
+        img(src="img/slider_80.jpg")
+
+  .container#weddingday
+    h1.center Wedding Day
+    .divider(style={'margin-bottom': '30px'})
+    .row.center
+      h5 Transportation
+      .col.s12.m6
+        i.material-icons.logistics-icons directions_bus
+        p.info-text
+          | There will be a shuttle from the hotels to Newport Vineyards and back.
+          | More information will be available once we arrange it.
+      .col.s12.m6
+        i.material-icons.logistics-icons local_taxi
+        p.info-text
+          | #[a(href="http://www.uber.com", target="_blank") Uber] and #[a(href="http://www.lyft.com", target="_blank") Lyft] are both available in the area
+      br
+
+  .modal#modalrsvp(style={'-webkit-overflow-scrolling': 'touch'})
+    include rsvp
 
   footer.page-footer
     .footer-copyright

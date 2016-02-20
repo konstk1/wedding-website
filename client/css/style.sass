@@ -59,12 +59,16 @@ nav
   h6
     @include section1-text(20px)
 
-.parallax img
-  max-width: 150%
-  @media only screen and (min-width: 601px)
-    max-width: 120%
+.parallax
+  img
+    max-width: 150%
+    @media only screen and (min-width: 601px)
+      max-width: 120%
+  @media only screen and (min-width: 1400px)
+    width: 1400px
+    margin: 0 auto
 
-#where
+#where, #newport, #weddingday
   h1
     font-size: 44px
     font-weight: 100
@@ -73,12 +77,47 @@ nav
     font-weight: 100
     text-transform: uppercase
 
+$ourBlue: #03a9f4
 .btn
   margin-bottom: 15px
   font-size: 12px
-  background-color: #03a9f4
+  background-color: $ourBlue
 .btn:hover
   background-color: #0373b9
+
+.logistics-icons
+  font-size: 45px
+  color: #747576
+
+.info-text
+  font-size: 15px
+  font-weight: 300
+
+.slider .slides
+  background-color: black
+
+.slider .slides li img
+  background-size: contain
+  background-repeat: no-repeat
+
+@media only screen and (max-width: 992px)
+  .modal
+    width: 90%
+    max-height: 80%
+
+.error-box
+  border: 2px solid red
+
+li .material-icons
+  font-size: 10px
+
+label[data-error].text-field-label:after
+  white-space: nowrap
+  font-size: 12px
+
+label[data-error].text-field-label:not(.active):after
+  transform: translateY(-140%)
+
 
 $footerHeight: 30px
 

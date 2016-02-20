@@ -1,4 +1,12 @@
 doctype html
+
+- var rsvpTitle = "RSVP"
+- var whenTitle = "DATE"
+- var whereTitle = "LOCATION"
+- var newportTitle = "NEWPORT"
+- var hotelsTitle = "HOTELS"
+- var weddingDayTitle = "THE DAY"
+
 html
   head
     title= title
@@ -25,13 +33,21 @@ html
             img#favicon(src='favicon.ico')
             |Kon
           ul.right.hide-on-small-only
-            li: a.modal-trigger(href="#modalRsvp") RSVP
-            li: a(data-scroll, data-options='{"offset": -20}', href="#when") When
-            li: a(data-scroll, href="#where") Where
+            li: a.modal-trigger(href="#modalrsvp")= rsvpTitle
+            li: a(data-scroll, data-options='{"offset": -20}', href="#when")= whenTitle
+            li: a(data-scroll, href="#where")= whereTitle
+            li: a(data-scroll, href="#newport")= newportTitle
+            li: a(data-scroll, href="#staying")= hotelsTitle
+            li: a(data-scroll, href="#weddingday")= weddingDayTitle
           ul.side-nav#mobile-menu
-            li: a(data-scroll, data-options='{"offset": -20}', href="#when") When
-            li: a(data-scroll, href="#where") Where
-            li: a.modal-trigger(href="#modalRsvp") RSVP
+            li: a(data-scroll, data-options='{"offset": -20}', href="#when")= whenTitle
+            li: a(data-scroll, href="#where")= whereTitle
+            li: a(data-scroll, href="#newport")= newportTitle
+            li: a(data-scroll, href="#staying")= hotelsTitle
+            li: a(data-scroll, href="#weddingday")= weddingDayTitle
+            li: a.modal-trigger(href="#modalrsvp")= rsvpTitle
 
     block content
-    include google_analytics
+
+    if env != "test"
+      include google_analytics
