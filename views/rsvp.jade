@@ -35,28 +35,28 @@
       .col.m1.s12
         i.material-icons.prefix exposure_plus_1
       .input-field.col.m3.s12
-        input(id="bringing_guest", type="checkbox", class="filled-in")
+        input(id="bringing_guest", name="bringing_guest", type="checkbox", class="filled-in")
         label(for="bringing_guest") Guest
       .input-field.col.m8.s12
-        input(id="guest_name", type="text", class="validate", disabled)
+        input(id="guest_name", name="guest_name", type="text", class="validate", disabled)
         label(for="guest_name") Guest Name (Optional)
     .row
       .col.m1.s12
         i.material-icons.prefix music_note
       .input-field.col.m3.s12
-        select(id="music_type")
-          option(value="1") Cocktail Hour
-          option(value="2") Dinner
-          option(value="3" selected) Dancing
+        select(id="music_type", name="music_type")
+          option(value="cocktail") Cocktail Hour
+          option(value="dinner") Dinner
+          option(value="dancing" selected) Dancing
         label(for="music_type") Suggest a song for
       .input-field.col.m8.s12
-        input(id="song1", type="text", class="validate")
+        input(id="song1", name="song1", type="text", class="validate")
         label(for="song1") Artist - Title
     .row
       .col.m1.s12
         i.material-icons.prefix mode_edit
       .input-field.col.m11.s12
-        textarea(id="message", class="materialize-textarea")
+        textarea(id="message", name="message", class="materialize-textarea")
         label(for="message") Message (Optional)
     .row
       button.btn-flat.right(type="submit", name="action") Submit

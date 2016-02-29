@@ -32,4 +32,8 @@ router.get('/rsvp', function(req, res, next) {
   res.render('rsvp_mobile', {title: 'RSVP', env: "test"});
 });
 
+router.post('/', function(req, res, next) {
+  res.send('Posted' + req);
+});
+
 module.exports = router;
