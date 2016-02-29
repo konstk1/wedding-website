@@ -1,4 +1,9 @@
 $(function() {
+    if (isMobile()) {
+        console.log('Mobile device');
+        $('.modal-trigger').removeClass('modal-trigger').attr('href', 'rsvp');
+    }
+
     console.log('jquery ready');
     $('.parallax').parallax();
     $('.button-collapse').sideNav({
@@ -51,3 +56,11 @@ $(function() {
 });
 
 console.log('Main Ready');
+
+function isMobile() {
+    console.log("Navigator: " + navigator.userAgent);
+    //console.log("Width: " + $(window).width());
+    //return $(window).width() < 900;
+    return /(iphone|ipod|ipad|android|blackberry|windows ce|palm|symbian)/i.test(navigator.userAgent);
+};
+

@@ -102,6 +102,9 @@ nav {
   background-size: contain;
   background-repeat: no-repeat; }
 
+.modal {
+  max-height: 80%; }
+
 @media only screen and (max-width: 992px) {
   .modal {
     width: 90%;

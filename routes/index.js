@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/rsvp', function(req, res, next) {
-  res.render('rsvp', {title: 'RSVP', env: "test"});
+  res.render('rsvp_mobile', {title: 'RSVP', env: "test"});
 });
 
 module.exports = router;
