@@ -8,7 +8,7 @@
     li.info-text #[i.material-icons.prefix adjust] You may RSVP for other people.
     li.info-text #[i.material-icons.prefix adjust] If you have questions, contact Steph, Kon, or our respective parents.
 .row
-  form.col.s12#rsvp-form(method="post", action="")
+  form.col.s12#rsvp-form(method="post")
     .row.center#coming-group
       .col.m2.s3
         p &nbsp
@@ -59,5 +59,5 @@
         textarea(id="message", name="message", class="materialize-textarea")
         label(for="message") Message (Optional)
     .row
-      button.btn-flat.right(type="submit", name="action") Submit
+      button.btn-flat.right(type="submit") Submit
       button.modal-action.modal-close.waves-effect.waves-red.btn-flat Cancel

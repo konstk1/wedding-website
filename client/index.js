@@ -38,20 +38,42 @@ $(function() {
         }
     });
 
-    $("#rsvp-form").validate({
+    var rsvp_form = $('#rsvp-form');
+
+    rsvp_form.validate({
     });
 
     $('input[name="rsvp_group"]').change(function() {
         $(this).parent().removeClass('error-box');
     });
 
-    $("#bringing_guest").change(function() {
-        $("#guest_name").prop('disabled', !this.checked);
+    $('#bringing_guest').change(function() {
+        $('#guest_name').prop('disabled', !this.checked);
     });
 
     $(document).ready(function() {
         $('select').material_select();
         $('.slider').slider({full_width: false});
+
+        rsvp_form.submit(function(e) {
+            console.log(e);
+            $.ajax({
+                url: 'rsvp',
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function() {
+                    console.log('Post success');
+                }
+            });
+
+            console.log($(this).serialize());
+            alert($(this).serialize());
+            try {
+                e.preventDefault();
+            } catch (error) {
+                alert(error);
+            }
+        });
     });
 });
 
