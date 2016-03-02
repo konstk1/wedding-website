@@ -1,4 +1,6 @@
 var express = require('express');
+var monk = require('monk');
+var db = monk('localhost/rsvp');
 var router = express.Router();
 var Forecast = require('forecast');
 
@@ -33,7 +35,21 @@ router.get('/rsvp', function(req, res, next) {
 });
 
 router.post('/rsvp', function(req, res, next) {
-  res.send('Posted' + req);
+  res.setHeader('Content-Type', 'application/json');
+  res.send('{"status": "success"}');
+
+  console.log("Posted: ");
+  console.log(req.body);
+
+  var rsvps = db.get('rsvp');
+  rsvps.insert(req.body, function(err, doc) {
+    if (err) {
+      console.log('Error: ' + err);
+    } else {
+      console.log('Success: ' + JSON.stringify(doc));
+    }
+  });
+
 });
 
 module.exports = router;

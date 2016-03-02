@@ -32,16 +32,22 @@ $(function() {
               .attr('data-error', error.text());
             }
         },
-        submitHandler: function (form) {
-            console.log('form ok');
-            form.submit();
+        submitHandler: function (form, event) {
+            console.log(form);
+            event.preventDefault();
+            $.ajax({
+                url: 'rsvp',
+                type: 'POST',
+                data: $(form).serialize(),
+                success: function() {
+                    console.log('Post success');
+                }
+            });
+            alert($(form).serialize());
         }
     });
 
-    var rsvp_form = $('#rsvp-form');
-
-    rsvp_form.validate({
-    });
+     $('#rsvp-form').validate();
 
     $('input[name="rsvp_group"]').change(function() {
         $(this).parent().removeClass('error-box');
@@ -54,26 +60,6 @@ $(function() {
     $(document).ready(function() {
         $('select').material_select();
         $('.slider').slider({full_width: false});
-
-        rsvp_form.submit(function(e) {
-            console.log(e);
-            $.ajax({
-                url: 'rsvp',
-                type: 'POST',
-                data: $(this).serialize(),
-                success: function() {
-                    console.log('Post success');
-                }
-            });
-
-            console.log($(this).serialize());
-            alert($(this).serialize());
-            try {
-                e.preventDefault();
-            } catch (error) {
-                alert(error);
-            }
-        });
     });
 });
 
