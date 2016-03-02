@@ -1,16 +1,25 @@
 $(function() {
+    console.log('jquery ready');
+
     if (isMobile()) {
         console.log('Mobile device');
         $('.modal-trigger').removeClass('modal-trigger').attr('href', 'rsvp');
     }
 
-    console.log('jquery ready');
+    updateDataScroll();
+
     $('.parallax').parallax();
     $('.button-collapse').sideNav({
         closeOnClick: true
     });
 
-    $('.modal-trigger').leanModal();
+    $('.modal-trigger').leanModal({
+        complete: function() {
+          $('#rsvp-body').removeClass('hide');
+          $('#rsvp-submitted').addClass('hide');
+        }
+    });
+
     smoothScroll.init({
         speed: 500,
         easing: 'easeInOutCubic',
@@ -33,17 +42,19 @@ $(function() {
             }
         },
         submitHandler: function (form, event) {
-            console.log(form);
+            console.log(event.type);
             event.preventDefault();
             $.ajax({
                 url: 'rsvp',
                 type: 'POST',
                 data: $(form).serialize(),
                 success: function() {
+                    console.log('Coming: ' + form.rsvp_group.value);
                     console.log('Post success');
+                    $('#rsvp-body').addClass('hide');
+                    $('#rsvp-submitted').removeClass('hide');
                 }
             });
-            alert($(form).serialize());
         }
     });
 
@@ -57,10 +68,8 @@ $(function() {
         $('#guest_name').prop('disabled', !this.checked);
     });
 
-    $(document).ready(function() {
-        $('select').material_select();
-        $('.slider').slider({full_width: false});
-    });
+    $('select').material_select();
+    $('.slider').slider({full_width: false});
 });
 
 console.log('Main Ready');
@@ -70,5 +79,14 @@ function isMobile() {
     //console.log("Width: " + $(window).width());
     //return $(window).width() < 900;
     return /(iphone|ipod|ipad|android|blackberry|windows ce|palm|symbian)/i.test(navigator.userAgent);
-};
+}
 
+function updateDataScroll() {
+    console.log('Path: ' + window.location.pathname);
+    if (window.location.pathname == '/rsvp') {
+        console.log('RSVP');
+        $('.nav-wrapper ul li a').removeAttr('data-scroll');
+    } else {
+        console.log('Else');
+    }
+}
