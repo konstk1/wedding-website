@@ -84,9 +84,6 @@ function isMobile() {
 function updateDataScroll() {
     console.log('Path: ' + window.location.pathname);
     if (window.location.pathname == '/rsvp') {
-        console.log('RSVP');
         $('.nav-wrapper ul li a').removeAttr('data-scroll');
-    } else {
-        console.log('Else');
     }
 }

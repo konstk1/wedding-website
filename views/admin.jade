@@ -5,5 +5,22 @@ block scripts
   script(src='/js/jquery.validate.min.js')
 
 block content
-  h1 Admin
-  p #{ans}
+  .container
+    h4 Admin
+    table.striped
+      thead
+        tr
+          th(data-field='first_name') First
+          th(data-field='last_name') Last
+          th(data-field='coming') Coming?
+          th(data-field='guest') Guest?
+          th(data-field='guest_name') Guest Name
+      tbody
+        each rsvp in rsvps
+          tr
+            td !{rsvp.first_name}
+            td !{rsvp.last_name}
+            td !{rsvp.rsvp_group}
+            td !{rsvp.bringing_guest}
+            td !{rsvp.guest_name}
+
