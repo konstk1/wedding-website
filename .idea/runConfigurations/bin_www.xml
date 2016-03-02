@@ -2,6 +2,7 @@
   <configuration default="false" name="bin/www" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
     <envs>
       <env name="DEBUG" value="wedding:*" />
+      <env name="MONGOLAB_URI" value="mongodb://heroku_j7mbgx8k:d4kig3vua11lblorqfc23f58dv@ds019048.mlab.com:19048/heroku_j7mbgx8k" />
     </envs>
     <browser start="true" with-js-debugger="true" url="http://localhost:3000/" />
     <method />
