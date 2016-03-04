@@ -1,9 +1,10 @@
 $(function() {
-    console.log('jquery ready');
+    console.log('Document ready');
 
     if (isMobile()) {
         console.log('Mobile device');
         $('.modal-trigger').removeClass('modal-trigger').attr('href', 'rsvp');
+        $('button#rsvp-cancel').hide();
     }
 
     updateDataScroll();
@@ -75,7 +76,7 @@ $(function() {
 console.log('Main Ready');
 
 function isMobile() {
-    console.log("Navigator: " + navigator.userAgent);
+    console.log("User Agent: " + navigator.userAgent);
     //console.log("Width: " + $(window).width());
     //return $(window).width() < 900;
     return /(iphone|ipod|ipad|android|blackberry|windows ce|palm|symbian)/i.test(navigator.userAgent);

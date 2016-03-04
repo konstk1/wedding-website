@@ -1,13 +1,11 @@
 div#rsvp-body
   .row.center
     h5 RSVP Instructions
-    .divider
     ul
-      li.info-text #[i.material-icons.prefix adjust] Please RSVP by #[b April 20th], that's when final count to catering is due.Replies after #[b April 20th], will not be guaranteed a meal.
-      li.info-text #[i.material-icons.prefix adjust] If you need to change your response, just submit a new form.
-      li.info-text #[i.material-icons.prefix adjust] You may RSVP as many times as you'd like, only the most recent submission will count.
-      li.info-text #[i.material-icons.prefix adjust] You may RSVP for other people.
+      li.info-text #[i.material-icons.prefix adjust] Please RSVP by #[b April 15th].
+      li.info-text #[i.material-icons.prefix adjust] To change your response, just submit a new form.
       li.info-text #[i.material-icons.prefix adjust] If you have questions, contact Steph, Kon, or our respective parents.
+    .divider
   .row
     form.col.s12#rsvp-form
       .row.center#coming-group
@@ -60,8 +58,8 @@ div#rsvp-body
           textarea(id="message", name="message", class="materialize-textarea")
           label(for="message") Message (Optional)
       .row
-        button.btn-flat.right(type="submit") Submit
-        button.modal-action.modal-close.waves-effect.waves-red.btn-flat.cancel.hide-on-small-only(type='reset') Cancel
+        button.btn.btn-flat.waves-effect.waves-light.right(type="submit") Submit
+        button.btn.modal-action.modal-close.waves-effect.waves-light.btn-flat.cancel#rsvp-cancel(type='reset') Cancel
 
 div#rsvp-submitted.hide
   .row.center
