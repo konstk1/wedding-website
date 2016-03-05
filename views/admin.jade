@@ -15,6 +15,7 @@ block content
           th(data-field='coming') Coming?
           th(data-field='guest') Guest?
           th(data-field='guest_name') Guest Name
+          th(data-field='message') Message
       tbody
         each rsvp in rsvps
           tr
@@ -23,4 +24,5 @@ block content
             td !{rsvp.rsvp_group}
             td !{rsvp.bringing_guest}
             td !{rsvp.guest_name}
+            td !{rsvp.message}
 
