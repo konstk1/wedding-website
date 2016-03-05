@@ -16,6 +16,7 @@ block content
           th(data-field='guest') Guest?
           th(data-field='guest_name') Guest Name
           th(data-field='message') Message
+          th(data-field='song') Song
       tbody
         each rsvp in rsvps
           tr
@@ -25,4 +26,5 @@ block content
             td !{rsvp.bringing_guest}
             td !{rsvp.guest_name}
             td !{rsvp.message}
+            td !{rsvp.song1}
 
