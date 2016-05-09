@@ -95,6 +95,12 @@ nav {
   font-size: 15px;
   font-weight: 300; }
 
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
 .slider .slides {
   background-color: black; }
 

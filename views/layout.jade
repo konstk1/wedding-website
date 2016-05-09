@@ -15,6 +15,7 @@ html
     script(type='text/javascript' src='http://code.jquery.com/jquery.min.js')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js")
     script(src="js/smooth-scroll.js")
+    script(src='https://use.fontawesome.com/144793f281.js')
     link(rel='stylesheet', href='/css/style.min.css')
     link( href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700', rel='stylesheet', type='text/css')
 
@@ -33,19 +34,17 @@ html
             img#favicon(src='favicon.ico')
             |Kon
           ul.right.hide-on-small-only
-            li: a.modal-trigger(href="#modalrsvp", style={'color': 'rgb(216, 77, 84)'})= rsvpTitle
-            li: a(data-scroll, data-options='{"offset": -20}', href="/#when")= whenTitle
+            li: a(data-scroll, href="/#weddingday", style={'color': 'rgb(216, 77, 84)'})= weddingDayTitle
             li: a(data-scroll, href="/#where")= whereTitle
             li: a(data-scroll, href="/#newport")= newportTitle
             li: a(data-scroll, href="/#staying")= hotelsTitle
-            li: a(data-scroll, href="/#weddingday")= weddingDayTitle
+            li: a.modal-trigger(href="#modalrsvp")= rsvpTitle
           ul.side-nav#mobile-menu
-            li: a(data-scroll, data-options='{"offset": -20}', href="/#when")= whenTitle
+            li: a(data-scroll, href="/#weddingday", style={'color': 'rgb(216, 77, 84)'})= weddingDayTitle
             li: a(data-scroll, href="/#where")= whereTitle
             li: a(data-scroll, href="/#newport")= newportTitle
             li: a(data-scroll, href="/#staying")= hotelsTitle
-            li: a(data-scroll, href="/#weddingday")= weddingDayTitle
-            li: a(href="rsvp", style={'color': 'rgb(216, 77, 84)'})= rsvpTitle
+            li: a(href="rsvp")= rsvpTitle
 
     block content
 

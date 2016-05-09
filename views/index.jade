@@ -13,6 +13,101 @@ block content
       h5 We are getting married!
       h6 Sunday, May 22, 2016
       h6 5:30pm - 11pm
+  .container#weddingday
+    h1.center Wedding Day
+    .divider(style={'margin-bottom': '30px'})
+    .row.center
+      h5 What's going to happen
+      .col.s12.m6
+        i.material-icons.logistics-icons access_time
+        p.info-text
+          | We want a very informal wedding.  We minimized the formalities and maximized the fun.
+          .col.s3 &nbsp
+          .col.s2.info-text.text-right
+            | 5:30#[br]
+            b 6:00#[br]
+            | 6:15#[br]
+            | 7:00#[br]
+            | 8:30#[br]
+            | 10:30#[br]
+            | 11:00
+          .col.s7.info-text.text-left
+            | Cocktail Hour #[br]
+            b Ceremony #[br]
+            | Cocktail Hour Continued #[br]
+            | Dinner #[br]
+            | Dessert + Dancing #[br]
+            | Last Call (Bar Closes) #[br]
+            | Venue Closes
+      .col.s12.m6
+        i.fa.logistics-icons.fa-glass(style={'font-size': '30px'}) &nbsp
+        i.fa.logistics-icons.fa-plus(style={'font-size': '20px'}) &nbsp&nbsp
+        i.fa.logistics-icons.fa-cutlery(style={'font-size': '30px', 'margin-bottom': '10px', 'margin-top': '10px'})
+        p.info-text #[b Open bar] with top shelf liquor, beer, wine, etc. all evening.#[br]
+        p.info-text Various Passed Hors D'oeuvres during Cocktail Hour.#[br]
+        p(style={'margin-bottom': '0px'}) Dinner Menu
+          ul.info-text(style={'margin-top': '0px'})
+            li Newport Salad
+            li Roast Chicken Provencal
+            li Short Ribs Toscana
+            li Wild Mushroom Ravioli
+        p(style={'margin-bottom': '0px'}) Dessert
+          ul.info-text(style={'margin-top': '0px'})
+            li French Pastry Table
+            li Karin Cheesecake
+      br
+    br
+    .row.center
+      h5 Transportation
+      .col.s12.m6
+        i.material-icons.logistics-icons directions_bus
+        p.info-text There will be shuttles to and from hotels suggested below.  Look for a Mercedes Sprinter Van, which roughly&nbsp
+          | #[a(href="http://www.mercedes-benz.co.nz/content/media_library/hq/hq_mpc_reference_site/van_ng/new_vans/models/model_navigation_flyout_1/flyout_sprinter_02_crewbus_960x298_05-2013.object-Single-MEDIA.tmp/Sprinter_kombi_Flyout_960x298_2015.jpg", target="_blank") looks like this],&nbsp
+          | keeping in mind it may be different color and/or model year.
+        p Please check back here on the day for any last minute changes.
+        p.info-text Courtyard - #[b 5:00pm] departure
+        p.info-text Homewood Suites - #[b 5:00pm] and #[b 5:25pm] departures#[br]
+          | Hampton Inn - #[b 5:00pm] and #[b 5:25pm] departures
+
+      .col.s12.m6
+        i.material-icons.logistics-icons local_taxi
+        p.info-text
+          | #[a(href="http://www.uber.com", target="_blank") Uber], #[a(href="http://www.lyft.com", target="_blank") Lyft] and various taxis are available in the area.
+      br
+    br
+    .row.center
+      h5 Gifts and Attire
+      .col.s12.m6
+        i.material-icons.logistics-icons card_giftcard
+        i.material-icons.logistics-icons arrow_forward
+        i.material-icons.logistics-icons attach_money
+        p.info-text
+          | We don't want you to have to deal with things and we don't need more stuff.
+          | If you'd like to bring a gift, a check (or cash) will help us buy stuff in the future.
+      .col.s12.m6
+        i.material-icons.logistics-icons wc
+        p.info-text
+          | There is no dress code but we are suspecting most people will wear "nice restaurant" type clothes.
+      br
+
+  .slider
+    ul.slides.center
+      li
+        img(src="img/slider_10.jpg")
+      li
+        img(src="img/slider_20.jpg")
+      li
+        img(src="img/slider_30.jpg")
+      li
+        img(src="img/slider_40.jpg")
+      li
+        img(src="img/slider_50.jpg")
+      li
+        img(src="img/slider_60.jpg")
+      li
+        img(src="img/slider_70.jpg")
+      li
+        img(src="img/slider_80.jpg")
 
   .container#where
     h1.center Location
@@ -120,56 +215,6 @@ block content
             i.material-icons.right hotel
         .col.s12.m6
           img(src="img/homewood-room.jpg", style={'max-width': '100%'})
-
-  .slider
-    ul.slides.center
-      li
-        img(src="img/slider_10.jpg")
-      li
-        img(src="img/slider_20.jpg")
-      li
-        img(src="img/slider_30.jpg")
-      li
-        img(src="img/slider_40.jpg")
-      li
-        img(src="img/slider_50.jpg")
-      li
-        img(src="img/slider_60.jpg")
-      li
-        img(src="img/slider_70.jpg")
-      li
-        img(src="img/slider_80.jpg")
-
-  .container#weddingday
-    h1.center Wedding Day
-    .divider(style={'margin-bottom': '30px'})
-    .row.center
-      h5 Transportation
-      .col.s12.m6
-        i.material-icons.logistics-icons directions_bus
-        p.info-text
-          | There will be a shuttle from the hotels to Newport Vineyards and back.
-          | More information will be available once we arrange it.
-      .col.s12.m6
-        i.material-icons.logistics-icons local_taxi
-        p.info-text
-          | #[a(href="http://www.uber.com", target="_blank") Uber] and #[a(href="http://www.lyft.com", target="_blank") Lyft] are both available in the area
-      br
-    br
-    .row.center
-      h5 Gifts and Attire
-      .col.s12.m6
-        i.material-icons.logistics-icons card_giftcard
-        i.material-icons.logistics-icons arrow_forward
-        i.material-icons.logistics-icons attach_money
-        p.info-text
-          | We don't want you to have to deal with things and we don't need more stuff.
-          | If you'd like to bring a gift, a check (or cash) will help us buy stuff in the future.
-      .col.s12.m6
-        i.material-icons.logistics-icons wc
-        p.info-text
-          | There is no dress code but we are suspecting most people will wear "nice restaurant" type clothes.
-      br
 
   .modal#modalrsvp(style={'-webkit-overflow-scrolling': 'touch'})
     .modal-content
