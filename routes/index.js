@@ -26,7 +26,23 @@ router.get('/', function(req, res, next) {
     forecast.get(newportLatLon.concat(weddingDate), function(err, weather) {
       if (err) return console.dir(err);
       futureTemp = Math.round(weather.currently.temperature);
-      res.render('index', { title: 'Steph + Kon', temps: {current: currentTemp, future: futureTemp} });
+      var hourlyWeather = [];
+      weather.hourly.data.forEach(function(d) {
+        if (d.time >= 1463943600) {
+          var time = new Date(d.time * 1000);
+          if (time.getHours() % 2 != 0) {
+            var c = {
+              hour: time.getHours() - 12,
+              temp: Math.round(d.temperature),
+              cond: d.icon,
+              precip: Math.round(d.precipProbability * 100)
+            };
+            hourlyWeather.push(c);
+          }
+        }
+      });
+
+      res.render('index', { title: 'Steph + Kon', temps: {current: currentTemp, future: futureTemp}, hourly_weather: hourlyWeather });
     });
   });
 });

@@ -4,6 +4,8 @@ block scripts
   script(src='/js/index.min.js')
   script(src='/js/jquery.validate.min.js')
 
+  link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css")
+
 block content
 
   .parallax-container#section1
@@ -143,6 +145,35 @@ block content
         .col.s6
           div.center On The Day
           div.center #{temps.future}°F
+        br
+        br
+        br
+        h5.center Hourly Forecast
+        .col.s1 &nbsp
+        each weather in hourly_weather
+          .col.s2.center.info-text
+            p #{weather.hour}p
+            p #{weather.temp}°F
+            if weather.cond == 'clear-day'
+              i.wi.wi-day-sunny
+            else if weather.cond == 'partly-cloudy-day'
+              i.wi.wi-day-cloudy
+            else if weather.cond == 'rain'
+              i.wi.wi-rain
+            else if weather.cond == 'wind'
+              i.wi.wi-windy
+            else if weather.cond == 'fog'
+              i.wi.wi-fog
+            else if weather.cond == 'cloudy'
+              i.wi.wi-cloudy
+            else if weather.cond == 'clear-night'
+              i.wi.wi-night-clear
+            else if weather.cond == 'partly-cloudy-night'
+              i.wi.wi-night-alt-partly-cloudy
+            else
+              p #{weather.cond}
+            p #{weather.precip}%
+
 
   .parallax-container#section2
     .parallax
