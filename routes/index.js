@@ -35,7 +35,8 @@ router.get('/', function(req, res, next) {
               hour: time.getHours() - 12,
               temp: Math.round(d.temperature),
               cond: d.icon,
-              precip: Math.round(d.precipProbability * 100)
+              precip: Math.round(d.precipProbability * 100),
+              wind: Math.round(d.windSpeed)
             };
             hourlyWeather.push(c);
           }
