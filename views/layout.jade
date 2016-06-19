@@ -6,6 +6,7 @@ doctype html
 - var newportTitle = "NEWPORT"
 - var hotelsTitle = "HOTELS"
 - var weddingDayTitle = "THE DAY"
+- var photosTitle = "PHOTOS"
 
 html
   head
@@ -34,13 +35,13 @@ html
             img#favicon(src='favicon.ico')
             |Kon
           ul.right.hide-on-small-only
-            li: a(data-scroll, href="/#weddingday", style={'color': 'rgb(216, 77, 84)'})= weddingDayTitle
+            li: a(href="https://goo.gl/photos/fQomMY8wGSXGUgJo7", target="_blank", style={'color': 'rgb(216, 77, 84)'})= photosTitle
             li: a(data-scroll, href="/#where")= whereTitle
             li: a(data-scroll, href="/#newport")= newportTitle
             li: a(data-scroll, href="/#staying")= hotelsTitle
             li: a.modal-trigger(href="#modalrsvp")= rsvpTitle
           ul.side-nav#mobile-menu
-            li: a(data-scroll, href="/#weddingday", style={'color': 'rgb(216, 77, 84)'})= weddingDayTitle
+            li: a(href="https://goo.gl/photos/fQomMY8wGSXGUgJo7", target="_blank", style={'color': 'rgb(216, 77, 84)'})= photosTitle
             li: a(data-scroll, href="/#where")= whereTitle
             li: a(data-scroll, href="/#newport")= newportTitle
             li: a(data-scroll, href="/#staying")= hotelsTitle
