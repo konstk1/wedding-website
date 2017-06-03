@@ -1,6 +1,6 @@
 var express = require('express');
 var monk = require('monk');
-var db = monk(process.env.MONGOLAB_URI);
+var db = monk(process.env.MONGODB_URI);
 var rsvps = db.get('rsvp');
 var router = express.Router();
 var Forecast = require('forecast');
