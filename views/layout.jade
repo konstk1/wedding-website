@@ -3,7 +3,7 @@ doctype html
 - var rsvpTitle = "RSVP"
 - var whenTitle = "DATE"
 - var whereTitle = "LOCATION"
-- var newportTitle = "NEWPORT"
+- var acadiaTitle = "ACADIA"
 - var hotelsTitle = "HOTELS"
 - var weddingDayTitle = "THE DAY"
 - var photosTitle = "PHOTOS"
@@ -31,19 +31,19 @@ html
           a.button-collapse.hide-on-med-and-up(href="#", data-activates="mobile-menu")
             i.material-icons menu
           a.brand-logo(href="/")
-            |Steph
+            |Amanda
             img#favicon(src='favicon.ico')
-            |Kon
+            |Eugene
           ul.right.hide-on-small-only
-            li: a(href="https://goo.gl/photos/fQomMY8wGSXGUgJo7", target="_blank", style={'color': 'rgb(216, 77, 84)'})= photosTitle
+            //li: a(href="https://goo.gl/photos/fQomMY8wGSXGUgJo7", target="_blank", style={'color': 'rgb(216, 77, 84)'})= photosTitle
             li: a(data-scroll, href="/#where")= whereTitle
-            li: a(data-scroll, href="/#newport")= newportTitle
+            li: a(data-scroll, href="/#newport")= acadiaTitle
             li: a(data-scroll, href="/#staying")= hotelsTitle
             li: a.modal-trigger(href="#modalrsvp")= rsvpTitle
           ul.side-nav#mobile-menu
-            li: a(href="https://goo.gl/photos/fQomMY8wGSXGUgJo7", target="_blank", style={'color': 'rgb(216, 77, 84)'})= photosTitle
+            //li: a(href="https://goo.gl/photos/fQomMY8wGSXGUgJo7", target="_blank", style={'color': 'rgb(216, 77, 84)'})= photosTitle
             li: a(data-scroll, href="/#where")= whereTitle
-            li: a(data-scroll, href="/#newport")= newportTitle
+            li: a(data-scroll, href="/#newport")= acadiaTitle
             li: a(data-scroll, href="/#staying")= hotelsTitle
             li: a(href="rsvp")= rsvpTitle
 

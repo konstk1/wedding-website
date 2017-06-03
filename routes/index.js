@@ -43,7 +43,7 @@ router.get('/', function(req, res, next) {
         }
       });
 
-      res.render('index', { title: 'Steph + Kon', temps: {current: currentTemp, future: futureTemp}, hourly_weather: hourlyWeather });
+      res.render('index', { title: 'Amanda + Eugene', temps: {current: currentTemp, future: futureTemp}, hourly_weather: hourlyWeather });
     });
   });
 });
