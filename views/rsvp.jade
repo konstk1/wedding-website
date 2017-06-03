@@ -1,15 +1,26 @@
 div#rsvp-body
   .row.center
-    h5 RSVP Closed (deadline was April 15th)
+    h5 RSVP Instructions
     ul
-      li.info-text(style={'color' : 'red'}) #[i.material-icons.prefix adjust] If you can no longer attend, please submit form bellow.
-      li.info-text #[i.material-icons.prefix adjust] If you have questions, contact Steph, Kon, or our respective parents.
+      li.info-text #[i.material-icons.prefix adjust] Please RSVP by #[b Deadline TBD].
+      li.info-text #[i.material-icons.prefix adjust] To change your response, just submit a new form.
+      li.info-text #[i.material-icons.prefix adjust] If you have questions, contact Amanda, Eugene, or our respective parents.
     .divider
   .row
     form.col.s12#rsvp-form
       .row.center#coming-group
-        input.with-gap.center(name="rsvp_group", type="radio", value="no", id="coming_no", required)
-        label.center(for="coming_no") Can't make it
+        .col.m2.s3
+          p &nbsp
+        input.with-gap(name="rsvp_group", type="radio", value="yes", id="coming_yes", required)
+        label.col.m3.s6.center(for="coming_yes") I'm coming
+        .col.m1.s3
+          p &nbsp
+        .col.m1.s3
+          p &nbsp
+        input.with-gap(name="rsvp_group", type="radio", value="no", id="coming_no")
+        label.col.m3.s6.center(for="coming_no") Can't make it
+        .col.m2.s3
+          p &nbsp
       .row
         .col.m1.s12
           i.material-icons.prefix account_circle
@@ -19,6 +30,27 @@ div#rsvp-body
         .input-field.col.m6.s12
           input(id="last_name", name="last_name", type="text", class="validate", required)
           label.text-field-label(for="last_name") Last Name
+      .row
+        .col.m1.s12
+          i.material-icons.prefix exposure_plus_1
+        .input-field.col.m3.s12
+          input(id="bringing_guest", name="bringing_guest", type="checkbox", class="filled-in")
+          label(for="bringing_guest") Guest
+        .input-field.col.m8.s12
+          input(id="guest_name", name="guest_name", type="text", class="validate", disabled)
+          label(for="guest_name") Guest Name (Optional)
+      .row
+        .col.m1.s12
+          i.material-icons.prefix music_note
+        .input-field.col.m3.s12
+          select(id="music_type", name="music_type")
+            option(value="cocktail") Cocktail Hour
+            option(value="dinner") Dinner
+            option(value="dancing" selected) Dancing
+          label(for="music_type") Suggest a song for
+        .input-field.col.m8.s12
+          input(id="song1", name="song1", type="text", class="validate")
+          label(for="song1") Artist - Title (Optional)
       .row
         .col.m1.s12
           i.material-icons.prefix mode_edit
