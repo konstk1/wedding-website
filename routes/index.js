@@ -15,20 +15,20 @@ var forecast = new Forecast({
   }
 });
 
-var weddingDate = Date.parse("22-May-2016 17:00:00") / 1000;
-var newportLatLon = [41.529462, -71.272534];
+var weddingDate = Date.parse("22-Sept-2017 17:00:00") / 1000;
+var acadiaLatLon = [44.386432, -68.212873];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  forecast.get(newportLatLon, function(err, weather) {
+  forecast.get(acadiaLatLon, function(err, weather) {
     if (err) return console.dir(err);
     currentTemp = Math.round(weather.currently.temperature);
-    forecast.get(newportLatLon.concat(weddingDate), function(err, weather) {
+    forecast.get(acadiaLatLon.concat(weddingDate), function(err, weather) {
       if (err) return console.dir(err);
       futureTemp = Math.round(weather.currently.temperature);
       var hourlyWeather = [];
       weather.hourly.data.forEach(function(d) {
-        if (d.time >= 1463943600) {
+        if (d.time >= 1506106800) {
           var time = new Date(d.time * 1000);
           if (time.getHours() % 2 != 0) {
             var c = {
