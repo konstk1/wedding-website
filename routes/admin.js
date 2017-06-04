@@ -2,7 +2,7 @@ var express = require('express');
 var monk = require('monk');
 
 var router = express.Router();
-var db = monk(process.env.MONGOLAB_URI);
+var db = monk(process.env.MONGODB_URI);
 var collection = db.get('rsvp');
 
 router.get('/', function(req, res, next) {
