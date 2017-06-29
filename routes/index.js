@@ -15,7 +15,7 @@ var forecast = new Forecast({
   }
 });
 
-var weddingDate = Date.parse("22-Sept-2017 17:00:00") / 1000;
+var weddingDate = Date.parse("16-July-2017 17:00:00") / 1000; // in GMT
 var acadiaLatLon = [44.386432, -68.212873];
 
 /* GET home page. */
@@ -28,16 +28,19 @@ router.get('/', function(req, res, next) {
       futureTemp = Math.round(weather.currently.temperature);
       var hourlyWeather = [];
       weather.hourly.data.forEach(function(d) {
-        if (d.time >= 1506106800) {
+        if (d.time >= weddingDate && d.time <= (weddingDate + 28800)) {
           var time = new Date(d.time * 1000);
           if (time.getHours() % 2 != 0) {
             var c = {
-              hour: time.getHours() - 12,
+              hour: time.getHours() - 12 - 4,
               temp: Math.round(d.temperature),
               cond: d.icon,
               precip: Math.round(d.precipProbability * 100),
               wind: Math.round(d.windSpeed)
             };
+            if (c.hour < 0) {
+              c.hour += 24;
+            }
             hourlyWeather.push(c);
           }
         }

@@ -12,56 +12,75 @@ block content
     .parallax#when
       img(src='img/getting_married.jpg')
     .text.center
-      h5 We are getting married!
-      h6 Date TBD
-      h6 Time TBD
+      h5 Amanda + Eugene
+      h6 September 16, 2017
   .container#weddingday
     h1.center Wedding Day
     .divider(style={'margin-bottom': '30px'})
     .row.center
-      h5 What's going to happen
       .col.s12.m6
         i.material-icons.logistics-icons access_time
+        p Itinerary
         p.info-text
-          | TBD
-          .col.s3 &nbsp
-          .col.s2.info-text.text-right
-            | 0:00#[br]
-            b 0:00#[br]
-            | 0:00
-          .col.s7.info-text.text-left
-            | TBD #[br]
-            b TBD #[br]
-            | TBD
+          .col.s4.info-text.text-right
+            b 12:15#[br]
+            | 1:30 - 3:30#[br]
+            | #[br]
+            | 4:00 - 8:00
+          .col.s8.info-text.text-left
+            b Ceremony & Photos #[br]
+            | Cocktail Hour on Boat Cruise in Frenchman Bay #[br]
+            | Reception
       .col.s12.m6
-        i.fa.logistics-icons.fa-glass(style={'font-size': '30px'}) &nbsp
-        i.fa.logistics-icons.fa-plus(style={'font-size': '20px'}) &nbsp&nbsp
         i.fa.logistics-icons.fa-cutlery(style={'font-size': '30px', 'margin-bottom': '10px', 'margin-top': '10px'})
-        p.info-text TBD#[br]
-        p(style={'margin-bottom': '0px'}) Dinner Menu
+        //p.info-text Menu#[br]
+        p Dinner Menu
           ul.info-text(style={'margin-top': '0px'})
-            li TBD
-            li TBD
-        p(style={'margin-bottom': '0px'}) Dessert
-          ul.info-text(style={'margin-top': '0px'})
-            li TBD
-            li TBD
+            li Chargrilled Filet Mignon and Maine Lobster Tail
+            li Roasted Statler Breast of Chicken
+            li Grilled Portabella and Roasted Vegetable Stack
+        p.info-text All entrees served with spinach salad, rice/risotto, and vegetable
+        //p(style={'margin-bottom': '0px'}) Dessert
+        //  ul.info-text(style={'margin-top': '0px'})
+        //    li TBD
+        //    li TBD
       br
     br
     .row.center
-      h5 Transportation
-      .col.s12.m6
-        i.material-icons.logistics-icons directions_bus
-        p.info-text TBD
-        p Please check back here on the day for any last minute changes.
-        p.info-text TBD - #[b TBD] departure
+      h5 Ceremony & Reception Info
+      h5 &nbsp
+      .col.s12.m4
+        i.fa.logistics-icons.fa-venus-mars
+        p Ceremony
+        p.info-text Bayview Lawn (weather permitting) at 12:15p
+        P.info-text Bar Harbor Inn & Spa, 1 Newport Dr, Bar Harbor 04609
 
-      .col.s12.m6
-        i.material-icons.logistics-icons local_taxi
+      .col.s12.m4
+        i.material-icons.logistics-icons directions_boat
+        p Boat Cruise
+        p.info-text Boarding starts at 1:15p, departure at 1:30p
+        p.info-text Atlantic Oceanside Hotel, 119 Eden St, Bar Harbor 04609
+
+      .col.s12.m4
+        i.fa.logistics-icons.fa-group
+        p Reception
         p.info-text
-          | TBD
+          | Porcupine &nbsp
+          img(src='favicon.ico', style={'width': '25px'})
+          | &nbsp Room at 4:00p
+        p.info-text Bar Harbor Inn & Spa, 1 Newport Dr, Bar Harbor 04609
+
       br
     br
+    .row.center
+      h5 Boat Cruise Info
+      p.info-text
+        | Following the ceremony we will be enjoying cocktails and hors d'oeuvres during a private nature/sightseeing cruise in Frenchman Bay.  The boat will depart from the Atlantic Oceanside Hotel, which is 1.5 miles (7 minute drive) from the ceremony site.  We have been asked to arrive at 1:15 for boarding. 
+      p.info-text
+        | Although we don't have official transportation to/from the boat dock, we hope to create enough carpools.  Please let us know if you need help arranging transportation.  There is plenty of free parking at the boat dock.
+      p.info-text
+        | The boat has a heated enclosed cabin, an open top deck, and restrooms.  Temperatures on the water will be colder than on shore, so a warm layer or two are strongly recommended.  In case of bad weather, the captain will determine whether we will be able to go.  We will be aboard "The Acadian" operated by Acadian Nature Cruises. 
+        | For more information and photos of the boat, visit #[a(href="https://acadianboattours.com/", target='_blank') https:&#x2F;&#x2F;acadianboattours.com].
     .row.center
       h5 Gifts and Attire
       .col.s12.m6
@@ -69,11 +88,11 @@ block content
         i.material-icons.logistics-icons arrow_forward
         i.material-icons.logistics-icons attach_money
         p.info-text
-          | TBD
+          | We will be so happy to have you join us in this celebration and your warm wishes are enough of a gift for us.  However, for those who would still like to bring something, we will have a card box at the reception.
       .col.s12.m6
         i.material-icons.logistics-icons wc
         p.info-text
-          | TBD
+          | Standard wedding attire: button-down shirts and slacks for men; similarly formal for women.  Bring a warm layer for the boat cruise.
       br
 
   .slider
@@ -108,17 +127,17 @@ block content
       .col.s12.m6
         h5.center Acadia
         p.center
-          | Street Address
+          | Bar Harbor Inn
           br
-          | City in Maine, ME 00000
-        p.center.info-text
-          | Description TBD
+          | 1 Newport Dr
+          br
+          | Bar Harbor, ME 04609
         div(style={'text-align': 'center'})
-          a.btn.waves-effect.waves-light(href='https://maps.google.com', target='_blank')
-            | Map TBD
+          a.btn.waves-effect.waves-light(href='https://goo.gl/maps/SQnKGFicgNn', target='_blank')
+            | Map
             i.material-icons.left map
           span &nbsp &nbsp
-          a.btn.waves-effect.waves-light(href='http://www.google.com', target='_blank') Website TBD
+          a.btn.waves-effect.waves-light(href='https://barharborinn.com/', target='_blank') Website
             i.material-icons.right.mdi-navigation-arrow-forward
         br
 
@@ -128,7 +147,7 @@ block content
           div.center Current
           div.center #{temps.current}°F
         .col.s6
-          div.center On The Day (TBD Date and Time)
+          div.center On The Day
           div.center #{temps.future}°F
         br
         br
@@ -157,7 +176,7 @@ block content
               i.wi.wi-night-alt-partly-cloudy
             else
               p #{weather.cond}
-            p #{weather.precip}%
+            p #{isNaN(weather.precip) ? '-' : weather.precip }%
 
   .parallax-container#section2
     .parallax
@@ -166,40 +185,33 @@ block content
   .container#newport
     h1.center Acadia
     .divider(style={'margin-top': '30px'})
-    .row
-      h5.center Arriving
-      .col.s12.m6.center
-        i.material-icons.logistics-icons airplanemode_active
-        p Fly
-        p.info-text
-          | Flying info TBD
-      .col.s12.m6.center
-        i.material-icons.logistics-icons directions_car
-        p Drive
-        p.info-text
-          | Driving info TBD
-    .divider(style={'margin-top': '30px'})
     .row#staying
       h5.center Staying
       p.center.info-text
-        | Hotel info TBD
+        | A block of 10 rooms has been reserved at the #[a(href="https://barharborqualityinn.com/", target='_blank') Quality Inn in Bar Harbor].
         br
-        | For those looking for a more unique or budget friendly experience, we recommend #[a(href="https://www.airbnb.com/") airbnb].
+        | #[a(href="https://www.airbnb.com/") AirBnB] is an option for those looking for a unique and budget-friendly experience.
+        br
+        | For those interested in camping, reservations can be made at campgrounds at Acadia National Park.
       .row.center
-        .col.s12.m6
-          h5 Hotel Name TBD
+        .col.s12.m7
+          h5 Quality Inn in Bar Harbor
           p.info-text
-            | Info about stay TBD
-            br
-            | How to reserve TBD
+            | Please mention the Maas/Klitenik wedding when making your reservation.
           p
-            | Hotel Address TBD #[br] Hotel phone TBD
-          a.btn.waves-effect.waves-light(href="http://www.google.com", target='_blank')
-            | Reserve TBD
+            | 40 Kebo Street, Bar Harbor, Maine, 04609 #[br]
+            | 207-288-5403
+          a.btn.waves-effect.waves-light(href="https://barharborqualityinn.com/rooms-in-bar-harbor/", target='_blank')
+            | Reserve
             i.material-icons.right hotel
-        .col.s12.m6
-          img(src="img/marriott_room.jpg", style={'max-width': '100%'})
-
+        .col.s12.m5
+          img(src="img/qualityinn_room.jpg", style={'max-width': '100%'})
+      .row.center
+        .col.s12.m7
+          h5 Camping
+          p.info-text Reservations are recommended and spaces may be limitted. Visit #[a(href="https://www.nps.gov/acad/planyourvisit/camping.htm", target='_blank') Acadia National Park Service website] for more info
+        .col.s12.m5
+          img(src="img/camping-tent.jpg", style={'max-width': '100%'})
 
   .modal#modalrsvp(style={'-webkit-overflow-scrolling': 'touch'})
     .modal-content
