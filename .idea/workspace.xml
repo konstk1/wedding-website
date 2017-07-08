@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="999ba5ab-c3f5-45c8-8a50-b54cac7fd956" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Kon.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Kon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/css/style.sass" afterPath="$PROJECT_DIR$/client/css/style.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.min.css" afterPath="$PROJECT_DIR$/public/css/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo.txt" afterPath="$PROJECT_DIR$/todo.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
     </list>
     <ignored path="wedding.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,17 +52,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todo.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="todo.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/todo.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="100" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="100" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.sass" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/css/style.sass">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="232">
@@ -140,9 +136,9 @@
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/rsvp.jade" />
         <option value="$PROJECT_DIR$/client/index.js" />
-        <option value="$PROJECT_DIR$/todo.txt" />
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/client/css/style.sass" />
+        <option value="$PROJECT_DIR$/todo.txt" />
       </list>
     </option>
   </component>
@@ -471,12 +467,12 @@
       <workItem from="1498684595578" duration="87000" />
       <workItem from="1498762917298" duration="7555000" />
       <workItem from="1498907590200" duration="12000" />
-      <workItem from="1499461888406" duration="11423000" />
+      <workItem from="1499461888406" duration="11450000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43620000" />
+    <option name="totallyTimeSpent" value="43647000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -871,18 +867,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="100" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/css/style.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="143" column="13" lean-forward="false" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
