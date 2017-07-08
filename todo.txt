@@ -8,3 +8,5 @@ Chargrilled Filet Mignon and Maine Lobster Tail with drawn butter
 Roasted Statler Breast of Chicken with cranberry orange chutney
 Grilled Portabella and Roasted Vegetable Stack with basil pesto buerre blanc & smoked tomato choulis
 All entrees served with spinach salad, rice/risotto, and vegetable
+
+Tooltip with meal details

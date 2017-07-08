@@ -1,8 +1,13 @@
+- var steakDesc = "Chargrilled Filet Mignon and Maine Lobster Tail with drawn butter"
+- var chickenDesc = "Roasted Statler Breast of Chicken with cranberry orange chutney"
+- var veggieDesc = "Grilled Portabella and Roasted Vegetable Stack with basil pesto buerre blanc & smoked tomato choulis"
+- var surpriseDesc = "Surprise me"
+
 div#rsvp-body
   .row.center
     h5 RSVP Instructions
     ul
-      li.info-text #[i.material-icons.prefix adjust] Please RSVP by #[b Deadline TBD].
+      li.info-text #[i.material-icons.prefix adjust] Please RSVP by #[b July 30th, 2017].
       li.info-text #[i.material-icons.prefix adjust] To change your response, just submit a new form.
       li.info-text #[i.material-icons.prefix adjust] If you have questions, contact Amanda, Eugene, or our respective parents.
     .divider
@@ -32,6 +37,17 @@ div#rsvp-body
           label.text-field-label(for="last_name") Last Name
       .row
         .col.m1.s12
+          i.material-icons.prefix local_dining
+        .input-field.col.m11.s12
+          select(id="menu", name="menu", class="validate", required)
+            option(value="" disabled selected) Choose your meal
+            option(value="steak")= steakDesc
+            option(value="chicken")= chickenDesc
+            option(value="veggie")= veggieDesc
+            option(value="surprise")= surpriseDesc
+          label(for="menu") What would you like for dinner?
+      .row
+        .col.m1.s12
           i.material-icons.prefix exposure_plus_1
         .input-field.col.m3.s12
           input(id="bringing_guest", name="bringing_guest", type="checkbox", class="filled-in")
@@ -39,6 +55,17 @@ div#rsvp-body
         .input-field.col.m8.s12
           input(id="guest_name", name="guest_name", type="text", class="validate", disabled)
           label(for="guest_name") Guest Name (Optional)
+      .row(id="guest_menu_row", style={'display': 'none'})
+        .col.m1.s12
+          i.material-icons.prefix local_dining
+        .input-field.col.m11.s12
+          select(id="guest_menu", name="guest_menu", class="validate")
+            option(value="" disabled selected) Choose guest meal
+            option(value="steak")= steakDesc
+            option(value="chicken")= chickenDesc
+            option(value="veggie")= veggieDesc
+            option(value="surprise")= surpriseDesc
+          label(for="guest_menu") What would your guest like for dinner?
       .row
         .col.m1.s12
           i.material-icons.prefix music_note

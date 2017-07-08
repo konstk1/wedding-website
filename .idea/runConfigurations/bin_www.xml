@@ -2,7 +2,7 @@
   <configuration default="false" name="bin/www" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
     <envs>
       <env name="DEBUG" value="wedding:*" />
-      <env name="MONGODB_URI" value="mongodb://heroku_j7mbgx8k:d4kig3vua11lblorqfc23f58dv@ds019048.mlab.com:19048/heroku_j7mbgx8k" />
+      <env name="MONGODB_URI" value="mongodb://heroku_vv2rzzdp:q5jslu321m0jmeju9eh8r4sfd@ds117311.mlab.com:17311/heroku_vv2rzzdp" />
     </envs>
     <browser start="true" with-js-debugger="true" url="http://localhost:3000/" />
     <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">

@@ -33,8 +33,21 @@ $(function() {
     $.validator.setDefaults({
         errorClass: 'invalid',
         validClass: 'valid',
+        ignore: [],
+        rules: {
+            guest_menu: {
+                required: {
+                    depends: function (element) {
+                        return $('#bringing_guest').is(':checked');
+                    }
+                }
+            }
+        },
         errorPlacement: function (error, element) {
-            if ($(element).attr('name') == "rsvp_group") {
+            console.log(error);
+            if ($(element).attr('name') === "rsvp_group" ||
+                $(element).attr('name') === "menu" ||
+                $(element).attr('name') === "guest_menu") {
               $(element).parent().addClass('error-box');
             } else {
               $(element).closest("form")
@@ -59,7 +72,7 @@ $(function() {
         }
     });
 
-     $('#rsvp-form').validate();
+    $('#rsvp-form').validate();
 
     $('input[name="rsvp_group"]').change(function() {
         $(this).parent().removeClass('error-box');
@@ -67,9 +80,16 @@ $(function() {
 
     $('#bringing_guest').change(function() {
         $('#guest_name').prop('disabled', !this.checked);
+        if (this.checked) {
+            $('#guest_menu_row').show();
+        } else {
+            $('#guest_menu_row').hide();
+        }
     });
 
-    $('select').material_select();
+    $('select').on('change', function() {
+        $(this).parent().removeClass('error-box');
+    }).material_select();
     $('.slider').slider({full_width: false});
 });
 

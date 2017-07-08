@@ -57,7 +57,6 @@ router.get('/rsvp', function(req, res, next) {
 
 router.post('/rsvp', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');
-
   rsvps.insert(req.body, function(err, doc) {
     if (err) {
       console.log('Error: ' + err);

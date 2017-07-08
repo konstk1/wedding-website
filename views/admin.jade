@@ -13,8 +13,10 @@ block content
           th(data-field='first_name') First
           th(data-field='last_name') Last
           th(data-field='coming') Coming?
+          th(data-field='menu') Menu
           th(data-field='guest') Guest?
           th(data-field='guest_name') Guest Name
+          th(data-field='guest_menu') Guest Menu
           th(data-field='message') Message
           th(data-field='song') Song
       tbody
@@ -23,8 +25,10 @@ block content
             td !{rsvp.first_name}
             td !{rsvp.last_name}
             td !{rsvp.rsvp_group}
+            td !{rsvp.menu}
             td !{rsvp.bringing_guest}
             td !{rsvp.guest_name}
+            td !{rsvp.guest_menu}
             td !{rsvp.message}
             td !{rsvp.song1}
 
