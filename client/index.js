@@ -35,10 +35,19 @@ $(function() {
         validClass: 'valid',
         ignore: [],
         rules: {
-            guest_menu: {
+          menu: {
+            required: {
+              depends: function (element) {
+                console.log($('#coming_yes').is(':checked'));
+                return $('#coming_yes').is(':checked')
+              }
+            }
+          },
+          guest_menu: {
                 required: {
                     depends: function (element) {
-                        return $('#bringing_guest').is(':checked');
+                        console.log($('#coming_yes').is(':checked'));
+                        return $('#bringing_guest').is(':checked') && $('#coming_yes').is(':checked');
                     }
                 }
             }
