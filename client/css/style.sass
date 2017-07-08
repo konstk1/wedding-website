@@ -131,6 +131,27 @@ label[data-error].text-field-label:after
 label[data-error].text-field-label:not(.active):after
   transform: translateY(-140%)
 
+.tooltip
+  border-bottom: 1px dotted black
+  position: relative
+  display: inline-block
+
+.tooltip .tooltiptext
+  visibility: hidden
+  padding: 3px 5px
+  position: absolute
+  top: 20px
+  right: -100px
+  z-index: 1
+  width: 200px
+  background-color: #292929
+  color: #fff
+  text-align: center
+  border-radius: 6px
+
+.tooltip:hover .tooltiptext
+  visibility: visible
+
 $footerHeight: 30px
 
 footer.page-footer
