@@ -20,6 +20,8 @@ var newportLatLon = [41.529462, -71.272534];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
   // forecast.get(newportLatLon, function(err, weather) {
   //   if (err) return console.dir(err);
   //   currentTemp = Math.round(weather.currently.temperature);
@@ -45,6 +47,8 @@ router.get('/', function(req, res, next) {
 
   //   });
   // });
+  console.log('rendering index')
+  // res.send('hello world');
   res.render('index', { title: 'Steph + Kon', temps: {current: 70, future: 70}, hourly_weather: [] });
 });
 
